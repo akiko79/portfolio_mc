@@ -1,0 +1,345 @@
+
+/* ハンバーガーメニュー */
+@media screen and (max-width: 950px) {
+  .laptop {
+    display: none;
+  }
+  .smaho {
+    display: block;
+  }
+  #hamburger {
+    opacity: 0;
+    position: fixed;
+  }
+  .burger:hover {
+    cursor: pointer;
+  }
+  label .burger {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    z-index: 3;
+    width: 2rem;
+    height: 2em;
+  }
+
+  label .burger::before,
+  label .burger::after,
+  label .burger .bar {
+    position: absolute;
+    right: 0;
+    width: 100%;
+    height: 4px;
+    border-radius: 5px;
+    background: rgb(88, 88, 88);
+    content: "";
+    transition: all .5s;
+  }
+  label .burger::before {
+    top: 0;
+    transform-origin: top right;
+  }
+  label .burger::after {
+    bottom: 0;
+    transform-origin: bottom right;
+  }
+  label .burger .bar {
+    top: 45%;
+  }
+
+  .smaho-menu {
+    position: fixed;
+    top: 0;
+    right: -220px;
+    bottom: 0;
+    z-index: 2;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    width: 220px;
+  }
+
+  .smaho-menu::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    width: 180%;
+    background: rgba(248, 152, 42, 0.774);
+    content: "";
+    transform: translateX(180%);
+    transform-origin: top right;
+    transition: transform 0.3s;
+  }
+
+  .smaho-menu a {
+    color: #fff;
+    font-size: 16px;
+    padding: 15px;
+    text-align: right;
+    text-decoration: none;
+    transform: translateX(100%);
+    transition: all 0.15s transform .5s;
+    transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+  }
+  .smaho-menu a:hover {
+    opacity: 0.6;
+  }
+
+  .smaho-inquiry {
+    background-color: #8383f3;
+    width: 180px;
+    height: 40px;
+    position: absolute;
+    bottom: 50px;
+    right: 30px;
+    border-radius: 7px;
+    box-shadow: 5px 5px #b2c8f1;
+    transform: translateX(150%);
+    transition: all 0.15s transform .5s;
+    transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+    }
+  .smaho-inquiry:hover {
+    opacity: 0.8;
+  }
+  .smaho-inquiry a {
+    color: #fff;
+    font-size: 15px;
+    letter-spacing: 4px;
+    padding-left: 20%;
+    line-height: 40px;
+  }
+  
+  #hamburger:checked + label .burger::before,
+  #hamburger:checked + label .burger::after {
+    width: 130%;
+  }
+  #hamburger:checked + label .burger::before{
+    transform: rotate(-45deg);
+  }
+  #hamburger:checked + label .burger::after {
+    transform: rotate(45deg);
+  }
+  #hamburger:checked + label .burger .bar {
+    transform: scale(0);
+  }
+
+  #hamburger:checked ~ .smaho-menu::before {
+    transform: skewX(-15deg) translateX(-220px);
+    transform-origin: bottom;
+  }
+  #hamburger:checked ~ .smaho-menu a {
+    transform: translateX(-220px);
+  }
+  #hamburger:checked ~ .smaho-menu .smaho-inquiry {
+    transform: translateX(-220px);
+  }
+
+  #hamburger:checked ~ .back {
+    background: #000000;
+    opacity: 0.7;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  /* font-size */
+  .intro h1 {
+    font-size: 24px;
+  }
+  .intro h2 {
+    font-size: 20px;
+  }
+  .question-page h2, .btn-item, .inquiry-sed p{
+    font-size: 16px;
+  }
+
+  .intro-wt  h3,.about p, .kakko p, .content-title, .merit-page p, li, .round-orenge p, .step-txt, code, .btn p, table th, table td, .panel-title, .inquiry-page > p {
+    font-size: 14px;
+  }
+  .intro-wt  p,.chat-page p, .text, .content-txt, .step p, .video-txt, .panel-txts {
+    font-size: 12px;
+  }
+
+  /* MAIN */
+
+  .background {
+    height: 150px;
+  }
+  .site-name {
+    font-size: 25px;
+    line-height: 30px;
+    padding-bottom: 8px;
+  }
+  .intro-wt {
+    padding: 0;
+  }
+  
+  /* チャット */
+  .chat-page {
+    padding-bottom: 0;
+  }
+  .chat-page p {
+    height: 40px;
+    line-height: 40px;
+  }
+  .triangle {
+    width: 20px;
+    height:20px;
+    border-top: solid 20px darkblue;
+    border-left: solid 20px transparent;
+    border-right: solid 20px transparent;
+    border-bottom: solid 20px transparent;
+    margin: 0 auto;
+    margin-bottom: 30px;
+  }
+
+  .text{
+    padding: 10px 15px;
+  }
+
+  /* 留学マッチングとは？ */
+  .about-page {
+    background-image: url(../pic/light.jpg);
+    padding: 20px;
+  }
+  .section {
+    font-size: 20px;
+  }
+  .about p {
+    padding-bottom: 20px;
+  }
+  .about-content {
+    display: block;
+  }
+  .content {
+    margin: 0 auto;
+    margin-bottom: 15px;
+  }
+  .content-title {
+    line-height: 30px;
+  }
+  .kakko {
+    width: 400px;
+    padding: 20px;
+    line-height: 20px;
+  }
+ 
+  .kakko::before,
+  .kakko::after {
+    content: "";
+    position: absolute;
+    height: 20px;
+    width: 20px;
+  }
+
+  /* メリット */
+  .none {
+    display: none;
+  }
+
+  .merit-page {
+    padding: 30px;
+  }
+
+  .merit {
+    display: block;
+    padding: 10px 20px 20px;
+  }
+  .round-orenge {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto;
+  }
+  .round-orenge p {
+    line-height: 80px;
+  }
+  ul {
+    text-align: center;
+  }
+
+  .inquiry-sed {
+    display: block;
+    padding: 10px;
+  }
+  .inquiry-sed p {
+    line-height: 35px;
+  }
+
+  .here-click {
+    width: 165px;
+    margin: 0 auto;
+  }
+
+  /* How */
+  code {
+    top: -29px;
+  }
+  .videos {
+    overflow: scroll;
+  }
+
+
+  /* fee */
+  .fee-page {
+    padding: 20px;
+  }
+
+  table {
+    border: none;
+    margin: 0 auto;
+  }
+
+  .laptop-table {
+    display: none;
+  }
+  .smaho-table {
+    display: block;
+    display: flex;
+    justify-content: center;
+  }
+
+  /* 質問 */  
+  .question-page {
+    padding: 40px;
+  }
+
+  .questionslist {
+    padding: 20px 15px;
+  }
+  .panel-title {
+    padding: 10px;
+  }
+
+  /* お問い合わせ */
+  .btn-item {
+    width: 300px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    padding: 5px;
+  }
+
+  .btn2 {
+    display: block;
+  }
+}
+
+
+@media screen and (max-width: 950px) {
+  .brsp {
+    display: block;
+  }
+  .about-content {
+    display: block;
+  }
+
+  /* 別タブ */
+  .q-radio {
+    margin-top: 0;
+  }
+  
+}

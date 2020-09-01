@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>アドバイザーになる</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="favicon.ico">
+  <script src="https://use.fontawesome.com/5c64a9e104.js"></script>
+
+</head>
+<body>
+  <header>
+    <div class="header-logo"> 
+      <i class="fa fa-adjust"></i>
+      <div class="header-logo-p">
+        留学マッチング
+      </div>
+    </div>
+  </header> 
+  <div class="empty"></div>
+  
+  <div class="advisor-page">
+
+    
+    <div class="form-content">
+      <h2>アドバイザーになる</h2>
+      <form action="#" method="POST" class="a-form">
+        <div class="a-info">
+          <input type="text"class="a-text" name="familyname" placeholder="姓">
+          <input type="text" class="a-text" name="firstname" placeholder="名">
+          <div class="a-info-flex">
+            <input type="text" class="a-text" name="emailaddress" placeholder="メールアドレス">
+            <input type="password" class="a-text" placeholder="パスワード">
+          </div>
+        </div>
+        <div class="a-about">
+          滞在先　<select name="country" id="country" style="color: #5a5858;">
+            <option>オーストラリア</option>
+            <option>カナダ</option>
+            <option>イギリス</option>
+            <option>ニュージーランド</option>
+            <option>アメリカ</option>
+            <option>その他</option>
+          </select>
+          <div class="radio">
+            <input class="a-radio" type="radio" name="whichone">留学生
+            <input class="a-radio" type="radio" name="whichone">交換留学生
+            <input class="a-radio" type="radio" name="whichone">ワーキングホリデー
+          </div>
+          期間　<input type="date" class="a-date" style="color: #5a5858;">　〜　<input type="date" style="color: #5a5858;">
+        </div>
+        <textarea class="a-textarea" name="question" id="" cols="120" rows="4" style="color: #5a5858;">質問はこちらに</textarea>
+        <input type="submit" class="a-submit" value="送　信">
+        <div class="a-home"><a href="index.html">ホームへ戻る</a></div>
+      </form>
+    </div>
+    <div class="advisorform">
+    <div class="advisor-img">
+      <img src="pic/ad.jpg" alt="">
+    </div>
+
+  </div>
+
+  
+</body>

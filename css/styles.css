@@ -1,0 +1,943 @@
+
+body {
+  margin: 0;
+  overflow: auto;
+  width: 100%;
+  font-family: 'Hiragino Kaku Gothic Pro',sans-serif;
+}
+.wrap {
+  overflow: hidden;
+  width: 100%;
+}
+header {
+  height: 75px;
+  width: 100%;
+  background: #eee;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  z-index: 3;
+}
+
+.header-logo {
+  font-size: 30px;
+  position: fixed;
+  top: 0;
+  left: 20px;
+  z-index: 3;
+}
+.header-logo > .fa-adjust {
+  color: coral;
+  padding-left: 20px;
+}
+.header-logo-p {
+  color: coral;
+  font-size: 10px;
+}
+
+.laptop-menu {
+  display: flex;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.laptop-menu a {
+  color: #666464;
+  font-size: 14px;
+  list-style: none;
+  text-decoration: none;
+  padding-right: 10px;
+  margin: 0;
+  line-height: 75px;
+  display: flex;
+}
+.laptop-menu a:hover {
+  opacity: 0.5;
+}
+
+.inquiry {
+ background-color: #8383f3;
+ width: 130px;
+ height: 50px;
+ margin-top: 7px;
+ margin-right: 10px;
+ border-radius: 7px;
+ box-shadow: 5px 5px #b2c8f1;
+}
+.inquiry:hover {
+  opacity: 0.8;
+}
+
+.inquiry a {
+  color: #fff;
+  font-size: 13px;
+  padding-left: 10%;
+  line-height: 50px;
+}
+.smaho {
+  display: none;
+}
+
+/* MAIN */
+* {
+  box-sizing: border-box;
+  font-weight: 600;
+  letter-spacing: 2px;
+  margin: 0;
+  padding: 0;
+  color: #000;
+  max-width: 100%;
+}
+.container {
+  text-align: center;
+}
+.empty {
+  height: 75px;
+}
+.brsp {
+  display: none;
+}
+
+.background {
+  background-image: url(../pic/graham-holtshausen-63JKK67yGUE-unsplash.jpg);
+  width: 100%;
+  background-size: cover;
+  padding-bottom: 30px;
+  position: relative; 
+  height: 213px;
+}
+
+.background-img {
+  position: absolute; 
+  left: 0; 
+  right: 0; 
+  top: 0; 
+  bottom: 0;
+}
+
+.background-site-name {
+  position: absolute;
+  left: 13%; 
+  right: 13%; 
+  top: 0; 
+  bottom: 0; 
+  background: linear-gradient(180deg, rgb(255 255 255 / 83%) 0%, rgb(255 255 255 / 28%) 100%);
+}
+
+.site-name {
+  font-size: 45px;
+  line-height: 60px;
+  padding: 30px 0 10px;
+}
+.site-name > .fa-adjust {
+  color: coral;
+}
+
+.intro-wt {
+  margin: 0 auto;
+  padding: 10px;
+}
+.intro-wt h3 {
+  color:darkblue;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+/* チャット */
+.chat-page {
+  background: rgb(168, 191, 235);
+  padding-bottom: 30px;
+  border-bottom: solid 3px darkblue;
+}
+.chat-page p {
+  background: darkblue;
+  color: #fff;
+  height: 60px;
+  line-height: 60px;
+}
+.triangle {
+  width: 30px;
+  height:30px;
+  border-top: solid 30px darkblue;
+  border-left: solid 30px transparent;
+  border-right: solid 30px transparent;
+  border-bottom: solid 30px transparent;
+  margin: 0 auto;
+}
+
+.messages {
+  margin: 0;
+  padding-bottom: 40px;
+  list-style: none;
+}
+
+.messages li {
+  display: flex;
+}
+
+.messages li + li {
+  margin-top: 30px;
+}
+
+li.right-side {
+  flex-direction: row-reverse;
+}
+
+.chat-icon {
+  width: 80px;
+  font-size: 40px;
+  padding-left: 20px;
+}
+.icon-gray {
+  color: #4d4c4c;
+}
+.icon-red {
+  color: #fc5e5e;
+}
+
+.text {
+  background: #fff;
+  border-radius: 8px;
+  padding: 15px 25px;
+  max-width: 60%;
+  line-height: 1.8;
+  position: relative;
+}
+
+.text::before {
+  content: '';
+  width: 0;
+  height: 0;
+  border: 8px solid transparent;
+  position: absolute;
+}
+
+.left-side .text::before {
+  top: 12px;
+  left: -16px;
+  border-right-color: #fff;
+}
+
+.right-side .text::before {
+  top: 12px;
+  right: -16px;
+  border-left-color: #fff;
+}
+
+/* 留学マッチングとは？ */
+
+.about-page {
+  /* background-image: url(../pic/light.jpg); */
+  padding: 50px 20px;
+  background-image: url(../pic/hands.jpg);
+  width: 100%;
+  background-size: cover;
+  border-bottom: solid 3px darkblue;
+}
+.section {
+  color: darkblue;
+  font-size: 30px;
+  font-weight: bolder;
+  padding-bottom: 20px;
+}
+.about p {
+  padding-bottom: 10px ;
+}
+
+.kakko {
+  position: relative;
+  width: 700px;
+  margin: 0 auto;
+  padding: 20px;
+  line-height: 30px;
+}
+.kakko::before,
+.kakko::after {
+  content: "";
+  position: absolute;
+  height: 40px;
+  width: 40px;
+}
+.kakko::before {
+  top: 0;
+  left: 0;
+  border-top: 4px solid coral;
+  border-left: 4px solid coral;
+}
+.kakko::after {
+  right: 0;
+  bottom: 0;
+  border-right: solid 4px coral;
+  border-bottom: solid 4px coral;
+}
+
+.about-content {
+  display: flex;
+  justify-content: center;
+}
+.content {
+  margin: 20px;
+  border-radius: 4px;
+  background: rgba(238, 238, 238, 0.85);
+  border: #666464 solid 1px;
+}
+.content-title {
+  color: #fff;
+  line-height: 40px;
+  background-color: #666464;
+  border-bottom:  #666464 solid 1px;
+}
+.content-txt {
+  padding: 25px;
+  text-align: justify;
+}
+
+/* メリット */
+.merit-page {
+  padding: 60px 50px 40px;
+}
+.check {
+  display: flex;
+  justify-content: center;
+  font-size: 30px;
+}
+.check > .fa-check {
+  color: #fc5e5e;
+}
+.merit-page > p {
+  font-weight: normal;
+  padding-bottom: 10px;
+}
+.merit {
+  background-color: #eee;
+  padding: 40px;
+  border-radius: 5px;
+  border: rgb(245, 163, 133) solid 3px;
+  display: flex;
+  justify-content: center;
+}
+.round-orenge {
+  width: 120px;
+  height: 120px;
+  background: coral;
+  border-radius: 50%;
+  margin-right: 30px;
+  position: relative;
+}
+.round-orenge p {
+  color: #fff;
+  font-size: 18px;
+  font-weight: lighter;
+  line-height: 120px;
+}
+ul {
+  list-style-position: inside;
+}
+li {
+  text-align: left;
+  line-height: 30px;
+}
+
+.inquiry-sed {
+  background-color: darkblue;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+}
+.inquiry-sed a{
+  text-decoration: none;
+}
+.inquiry-sed p {
+  color: #fff;
+  font-size: 18px;
+  line-height: 40px;
+}
+.here-click {
+  background-color: coral;
+  width: 200px;
+  border-radius: 20px;
+  box-shadow: 3px 3px 6px #bfb9b98f;
+  color: #fff;
+  font-size: 18px;
+  line-height: 40px;
+}
+.here-click:hover {
+  cursor: pointer;
+  transform: scaleX(1.1);
+  transition-duration: .3s;
+}
+.here-click:hover {
+  color: #333;
+}
+
+/* How */
+
+.how-page {
+  background-image: url(../pic/beachtate.jpg);
+  width: 100%;
+  background-size: cover;
+  padding-bottom: 70px;
+}
+
+.transparent {
+  background: hsla(15, 8%, 70%, 0.67);
+  border-radius: 4px;
+  max-width: 200px;
+  margin: 0 auto;
+  padding-bottom: 0;
+}
+
+.how-page > p {
+  color: #fff;
+  font-size: 12px;
+  font-weight: lighter;
+}
+.step-container {
+  max-width: 700px;
+  min-width: 250px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.steps-txt {
+  background-color: #eee;
+  padding: 10px 0;
+  margin: 0 auto;
+  justify-content: center;
+  position: relative;
+  border-radius: 3px;
+}
+
+.steps {
+  margin-top: 10px;
+} 
+
+.step {
+  width: 85px;
+  background-color: coral;
+  padding: 0 3px;
+  color: #fff;
+  font-weight: normal;
+  line-height: 30px;
+  border-radius: 3px;
+  }
+
+.example {
+  background-color: rgba(112, 128, 144, 0.692);
+  padding: 60px  40px;
+  margin-top: 80px;
+  position: relative;
+}
+
+code {
+  color: #fff;
+  background-color: rgba(112, 128, 144, 0.692);
+  font-size: 17px;
+  padding: 4px;
+  position: absolute;
+  left: 20px;
+  top: -34px;
+}
+.videos {
+  display: flex;
+  justify-content: space-around;
+  overflow: scroll;
+}
+.video {
+  width: 230px;
+  height: 130px;
+  margin: 0 10px;
+  background-color: #fff;
+}
+.video-txt {
+  width: 230px;
+  font-size: 13px; 
+  font-weight: normal; 
+  padding: 10px;
+  line-height: 25px;
+  text-align: center;
+  text-decoration: underline;
+}
+.btn {
+  background-color: coral;
+  width: 150px;
+  padding: 7px;
+  border-radius: 3px;
+  margin: 0 auto;
+}
+.btn:hover {
+  cursor: pointer;
+}
+.btn p {
+  font-size: 15px;
+  color: #fff;
+  text-align: center;
+}
+
+/* 料金 */
+
+.fee-page {
+  padding: 50px 60px;
+}
+.smaho-table {
+  display: none;
+}
+table {
+  border-collapse: collapse;
+  border: 1px solid #acaaaa;
+  table-layout: fixed;
+  width: 100%;
+}
+table th, table td {
+  font-weight: normal;
+  padding: 10px;
+  text-align: center;
+  background: #fff;
+  border: 1px solid #acaaaa;
+}
+table th {
+  background: #3F51B5;
+  color: #fff;
+  font-weight: bold;
+}
+.gray {
+  background: #eee;
+  font-weight: bolder;
+}
+
+
+/* 質問 */
+.question-page {
+  padding: 60px;
+}
+.question-page .fa-envelope-open {
+  color: coral;
+}
+.question-page h2 {
+  font-size: 20px;
+}
+
+.panel-group {
+  margin: 20px auto;
+}
+.panel {
+  margin-top: 8px;
+}
+.panel-title {
+  max-width: 700px;
+  margin: 0 auto;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  line-height: 16px;
+  border-radius: 3px;
+  border: 1px solid #eee;
+  box-shadow: 0 1px 1px rgba(0,0,0,.05);
+}
+.titles {
+  display: flex;
+  justify-content: start;
+}
+
+.panel-title:hover {
+  text-decoration: underline;
+  opacity: 0.7;
+}
+
+.panel-txts {
+  font-size: 13px;
+  text-align: left;
+  max-width: 670px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+.down {
+  font-size: 20px;
+}
+
+/* お問い合わせ */
+.application {
+  max-width: 700px;
+  min-width: 250px;
+  margin: 0px auto;
+  margin-top: 20px;
+}
+.open-icon {
+  padding-right: 7px;
+}
+.qs-icon {
+  padding-right: 4px;
+  color: darkblue;
+}
+
+.btn1 {
+  width: 90%;
+  margin: 0 auto;
+}
+.btn1 a{
+  text-decoration: none;
+}
+.btn2 {
+  display: flex;
+  justify-content: center;
+}
+.btn-item {
+  background-color: darkblue;
+  margin: 0 20px 20px;
+  border-radius: 2%;
+  border: #c4c5c7 2px solid;
+  padding: 10px;
+  font-size: 20px;
+  color: #ffffff;
+}
+
+.btn2-item {
+  width: 277px;
+}
+
+.btn-item:hover {
+  background-color: rgb(195, 226, 252);
+  border: #223A70 2px solid;
+  color: #333333;
+}
+
+/* トップページアイコン */
+.pagetop {
+  cursor:pointer;
+  position:fixed;
+  bottom:50px;
+  right:50px;
+  background-color:#ececec;
+  padding:20px;
+  opacity:0.7;
+  transition:all 1s;
+}
+
+.pagetop:hover {
+  opacity:1;
+}
+
+.fa-chevron-up {
+  font-size:30px;
+}
+
+/* フッター */
+footer {
+  width: 100%;
+  padding: 20px 0;
+  background-color: #364e86;
+}
+
+small {
+  padding: 8px;
+  color: #ffffff;
+  font-size: 10px;
+  font-weight: normal;
+  line-height: 10px;
+}
+
+.social {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding-top: 4px;
+  padding-bottom: 10px;
+}
+
+.social a {
+  background-color: #00acee;
+  color: #ffffff;
+  font-size: 7px;
+  padding: 5px;
+  margin: 3px;
+  border-radius: 3px;
+  text-decoration: none;
+}
+
+.social-fb {
+  text-align: center;
+  margin-top: 4px;
+}
+
+/* 別ダブ・アドバイザー */
+.form-content > h2 {
+  color: #474545;
+  padding: 20px;
+}
+
+.advisor-page {
+  background-color: #e8e2e7;
+  text-align: center;
+  display: flex;
+}
+.advisorform {
+  display: flex;
+}
+.advisor-img > img {
+  width: 100%;
+  height: 100%;
+} 
+
+.a-info {
+  max-width: 370px;
+  padding-bottom: 50px;
+  margin: 0 auto;
+}
+.a-info-flex {
+  display: flex;
+  flex-direction: column;
+}
+.a-text {
+  border: none;
+  border-radius: 2px;
+  padding: 7px;
+  margin: 10px;
+}
+
+.a-about {
+  margin-bottom: 20px;
+}
+#country {
+  padding: 6px;
+  border: none;
+  border-radius: 2px;
+}
+
+.a-textarea {
+  width: 500px;
+  max-width: 70%;
+  border-radius: 5px;
+  padding: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.a-submit {
+  background-color: coral;
+  width: 450px;
+  max-width: 70%;
+  border: none;
+  border-radius: 30px;
+  padding: 10px;
+  margin-bottom: 20px;
+  color: #ffffff;
+  font-size: 20px;
+}
+.a-text:hover, .a-radio:hover, #country:hover, .a-date:hover,.a-textarea:hover, .a-submit:hover, .a-home:hover {
+  cursor: auto;
+  opacity: 0.7;
+}
+.radio {
+  display: block;
+  margin: 20px;
+  font-size: 14px;
+}
+.a-radio {
+  margin: 15px 0;
+}
+.a-home {
+  text-align: right; 
+  padding: 40px;
+}
+.a-home a {
+  color: #2c2b2b;
+}
+
+/* 別タブ・お問い合わせ*/
+.questionform-page {
+  background-color: #bedce5;
+  text-align: center;
+}
+.questionform {
+  display: flex;
+}
+.questionform-img > img {
+  width: 100%;
+  height: 100%;
+} 
+
+.q-form {
+  margin: 0 auto;
+  width: 70%;
+}
+
+.q-text {
+  width: 500px;
+  max-width: 70%;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.q-textarea {
+  width: 500px;
+  max-width: 70%;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+.q-submit {
+  background-color: coral;
+  width: 450px;
+  max-width: 70%;
+  border: none;
+  border-radius: 30px;
+  padding: 10px;
+  margin-bottom: 20px;
+  color: #ffffff;
+  font-size: 20px;
+}
+.q-text:hover, .q-textarea:hover, .q-submit:hover, .q-home:hover {
+  cursor: auto;
+  opacity: 0.7;
+}
+.radio {
+  display: block;
+  margin: 10px;
+  font-size: 14px;
+}
+.q-radio {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+.q-home {
+  text-align: right; 
+  padding: 40px 20px;
+}
+.q-home a {
+  color: #3a3939;
+}
+
+/* 会員登録 */
+
+.r-img {
+  width: 100%;
+  margin: -10px 0;
+}
+.r-info {
+  text-align: center;
+}
+.r-info h2 {
+  color: #333333;
+  font-size: 20px;
+  padding-top: 20px;
+}
+.r-text {
+  padding: 8px;
+  margin-bottom: 10px;
+  width: 230px;
+}
+.r-submit {
+  color: #ffffff;
+  font-size: 20px;
+  padding: 6px;
+  margin: 10px 0 20px;
+  width: 200px;
+  background-color: coral;
+  border: none;
+  border-radius: 30px;
+}
+.r-agree {
+  font-size: 10px;
+  text-align: justify;
+  margin: 20px 20px 30px;
+}
+.r-log {
+  font-size: 12px;
+  margin-top: 30px;
+}
+.r-log a:hover {
+  color: #4649f8;
+}
+.r-home {
+  text-align: right; 
+  padding: 30px;
+}
+.r-home a {
+  color: #3a3939;
+}
+.r-text:hover, .r-submit:hover, .r-home:hover, #open:hover, #close:hover{
+  opacity: 0.7;
+}
+
+#open {
+  cursor: pointer;
+  width: 300px;
+  color: #fff;
+  background-color: coral;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  text-align: center;
+  padding: 12px;
+  margin: 70px auto ;
+  font-size: 25px;
+}
+
+#close {
+  font-size: 20px;
+  position: absolute;
+  top: 0;
+  right: 10px;
+}
+#close:hover {
+  cursor: default;
+}
+
+#mask {
+  background: rgba(0, 0, 0, 0.4);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 1;
+}
+
+#modal {
+  background: #fff;
+  width: 350px;
+  padding: 20px;
+  border-radius: 3px;
+  position: absolute;
+  top: 90px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  transition: transform 0.4s;
+  z-index: 2;
+}
+
+#mask.hidden {
+  display: none;
+}
+
+#modal.hidden {
+  transform: translate(0, -500px);
+}
+
+.sitelink {
+  margin: 20px auto 40px;
+  line-height: 45px;
+}
+.site-btn {
+  width: 100px;
+  height: 40px;
+  margin: 0 auto;
+  background-color: coral;
+  border-radius: 5px;
+  box-shadow: 5px 5px 5px #bdbdbd;
+}
+.site-btn .fa-paper-plane {
+  font-size: 20px;
+  color: #fff;
+  line-height: 40px;
+}
+.site-btn:hover{
+  cursor: pointer;
+  box-shadow: 5px 5px 5px #fff;
+  transform: translate(2px,2px);
+}
